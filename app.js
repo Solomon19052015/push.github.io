@@ -1,3 +1,6 @@
+importScripts('https://www.gstatic.com/firebasejs/8.3.0/firebase-app.js');
+importScripts('https://www.gstatic.com/firebasejs/8.3.0/firebase-messaging.js');
+
 var firebaseConfig = {
     apiKey: "AIzaSyAV2UJXYsPOOTwsfbmw6g_ozy_rVs8zFfA",
     authDomain: "plushkin-blr.firebaseapp.com",
