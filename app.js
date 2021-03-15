@@ -58,6 +58,7 @@ if (
         // Delete Instance ID token.
         messaging.getToken()
             .then(function(currentToken) {
+                console.log(currentToken)
                 messaging.deleteToken(currentToken)
                     .then(function() {
                         console.log('Token deleted');
