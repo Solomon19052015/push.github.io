@@ -4,20 +4,10 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Firebase Cloud Messaging</title>
-    <link rel="shortcut icon" href="favicon.png" />
-
-    <!-- Import Google Icon Font -->
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/icon?family=Material+Icons"
-    />
-
-    <!-- jQuery -->
-    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-    <script>
+       <script>
       if ('serviceWorker' in navigator) {
         window.addEventListener('load', function () {
-          navigator.serviceWorker.register('/firebase-messaging-sw.js').then(
+          navigator.serviceWorker.register('/firebase-messaging-sw').then(
             function (registration) {
               // Успешная регистрация
               console.log('ServiceWorker registration successful');
