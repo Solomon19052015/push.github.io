@@ -8,7 +8,7 @@
   <script>
         if ("serviceWorker" in navigator) {
         window.addEventListener("load", function () {
-          navigator.serviceWorker.register("firebase-messaging-sw.js").then(
+          navigator.serviceWorker.register("/push.github.io/firebase-messaging-sw.js").then(
             function (registration) {
               // Успешная регистрация
               console.log("ServiceWorker registration successful");
