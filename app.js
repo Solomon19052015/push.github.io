@@ -9,7 +9,7 @@ var firebaseConfig = {
   };
   // Initialize Firebase
   firebase.initializeApp(firebaseConfig);
-
+console.log(firebase)
 
 var bt_register = $('#register');
 var bt_delete = $('#delete');
@@ -50,6 +50,7 @@ if (
     'fetch' in window &&
     'postMessage' in window
 ) {
+
     var messaging = firebase.messaging();
 
     // already granted
