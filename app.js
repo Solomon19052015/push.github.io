@@ -1,5 +1,4 @@
-importScripts('https://www.gstatic.com/firebasejs/8.3.0/firebase-app.js');
-importScripts('https://www.gstatic.com/firebasejs/8.3.0/firebase-messaging.js');
+
 
 var firebaseConfig = {
     apiKey: "AIzaSyAV2UJXYsPOOTwsfbmw6g_ozy_rVs8zFfA",
@@ -28,23 +27,16 @@ var alert = $('#alert');
 var alert_message = $('#alert-message');
 
 var input_body = $('#body');
-var timerId = setInterval(setNotificationDemoBody, 10000);
 
-function setNotificationDemoBody() {
-    if (input_body.val().search(/^It's found today at \d\d:\d\d$/i) !== -1) {
-        var now = new Date();
-        input_body.val('It\'s found today at ' + now.getHours() + ':' + addZero(now.getMinutes()));
-    } else {
-        clearInterval(timerId);
-    }
-}
+
+
 
 function addZero(i) {
     return i > 9 ? i : '0' + i;
 }
 
-setNotificationDemoBody();
-resetUI();
+/* setNotificationDemoBody();
+resetUI(); */
 
 if (
     'Notification' in window &&
