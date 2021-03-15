@@ -36,7 +36,7 @@ function subscribe() {
     messaging.requestPermission()
         .then(function () {
             // получаем ID устройства
-            messaging.getToken()
+            messaging.getToken({vapidKey:'BFv4fANA94BY2V7wkXQQF-veVILrK3OiCdk_K7plUPrlp3YzEs2tncq4CZ_OwePFRH9Mh7WiyIgzqlL6eZUt6Og'})
                 .then(function (currentToken) {
                     console.log(currentToken);
 
