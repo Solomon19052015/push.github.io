@@ -1,24 +1,44 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Firebase Cloud Messaging</title>
-    <link rel="shortcut icon" href="favicon.png">
+    <link rel="shortcut icon" href="favicon.png" />
 
     <!-- Import Google Icon Font -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    />
 
     <!-- jQuery -->
     <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-   
-</head>
-<body>
+    <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', function () {
+          navigator.serviceWorker.register('/firebase-messaging-sw.js').then(
+            function (registration) {
+              // Успешная регистрация
+              console.log('ServiceWorker registration successful');
+            },
+            function (err) {
+              // При регистрации произошла ошибка
+              console.log('ServiceWorker registration failed: ', err);
+            }
+          );
+        });
+      }
+    </script>
+  </head>
+  <body>
     <button type="button" id="subscribe">Следить за изменениями</button>
 
-    <script type="text/javascript" src="//www.gstatic.com/firebasejs/3.6.8/firebase.js"></script>
+    <script
+      type="text/javascript"
+      src="//www.gstatic.com/firebasejs/3.6.8/firebase.js"
+    ></script>
     <script type="text/javascript" src="/firebase_subscribe.js"></script>
     <script src="app.js"></script>
-</body>
+  </body>
 </html>
-
