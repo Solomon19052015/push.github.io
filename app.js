@@ -24,7 +24,7 @@ if ('Notification' in window) {
 
   // по клику, запрашиваем у пользователя разрешение на уведомления
   // и подписываем его
-  document.querySelector('.subscribe').onclick = (e) => {
+  document.querySelector('#subscribe').onclick = (e) => {
     console.log('click');
     subscribe();
   };
