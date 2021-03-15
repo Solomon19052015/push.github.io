@@ -4,10 +4,10 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Firebase Cloud Messaging</title>
-       <script>
+    <script>
       if ('serviceWorker' in navigator) {
         window.addEventListener('load', function () {
-          navigator.serviceWorker.register('/firebase-messaging-sw').then(
+          navigator.serviceWorker.register('/firebase-messaging-sw.js/').then(
             function (registration) {
               // Успешная регистрация
               console.log('ServiceWorker registration successful');
@@ -24,10 +24,7 @@
   <body>
     <button type="button" id="subscribe">Следить за изменениями</button>
 
-    <script
-      type="text/javascript"
-      src="//www.gstatic.com/firebasejs/3.6.8/firebase.js"
-    ></script>
-     <script src="app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.0/firebase-app.js"></script>
+    <script src="app.js"></script>
   </body>
 </html>
